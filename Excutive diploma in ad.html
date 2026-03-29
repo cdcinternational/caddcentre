@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cadd-Centre Kasaragod</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+    <link rel="stylesheet" href="css/ai-bd.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Favicon -->
+    <link href="Public/fav-icon.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Custom CSS for main content heading -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+      }
+
+      .new-container {
+        display: flex;
+        min-height: 80vh;
+        position: relative;
+        margin-top: 20px;
+      }
+
+      .left-section {
+        flex: 0 0 45%; /* Changed from flex: 1 to flex: 0 0 45% to reduce width */
+        background: linear-gradient(135deg, #a86aa4 0%, #b97bb5 100%);
+        padding: 80px 40px; /* Reduced padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+      }
+
+      .right-section {
+        flex: 0 0 55%; /* Changed from flex: 1 to flex: 0 0 55% to give more space to right section */
+        background: linear-gradient(135deg, #f5e6f0 0%, #e8dae6 100%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Architectural blueprint lines background */
+      .right-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            0deg,
+            rgba(200, 180, 200, 0.3) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(200, 180, 200, 0.3) 1px, transparent 1px),
+          linear-gradient(45deg, rgba(200, 180, 200, 0.2) 1px, transparent 1px),
+          linear-gradient(-45deg, rgba(200, 180, 200, 0.2) 1px, transparent 1px);
+        background-size: 50px 50px, 50px 50px, 70px 70px, 70px 70px;
+        z-index: 1;
+      }
+
+      h1 {
+        color: #f4e94d;
+        font-size: 3rem; /* Slightly reduced font size */
+        font-weight: 700;
+        margin-bottom: 25px; /* Reduced margin */
+        line-height: 1.2;
+      }
+
+      .subtitle {
+        color: #fff;
+        font-size: 1.1rem; /* Slightly reduced font size */
+        line-height: 1.6;
+        margin-bottom: 40px; /* Reduced margin */
+        max-width: 90%; /* Adjusted max-width */
+      }
+
+      .info-list {
+        list-style: none;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-size: 1.05rem; /* Slightly reduced font size */
+        margin-bottom: 20px; /* Reduced margin */
+      }
+
+      .icon {
+        width: 26px; /* Slightly reduced size */
+        height: 26px; /* Slightly reduced size */
+        margin-right: 15px; /* Reduced margin */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #f4e94d;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .icon svg {
+        width: 15px; /* Slightly reduced size */
+        height: 15px; /* Slightly reduced size */
+        stroke: #f4e94d;
+        fill: none;
+        stroke-width: 2;
+      }
+
+      .student-image {
+        position: relative;
+        z-index: 2;
+        max-width: 650px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .puzzle-piece {
+        position: absolute;
+        bottom: 80px; /* Adjusted position */
+        right: 80px; /* Adjusted position */
+        z-index: 3;
+        width: 450px; /* Reduced size */
+        height: 350px; /* Reduced size */
+        background: linear-gradient(135deg, #8b4a9e 0%, #6a3d7f 100%);
+        clip-path: polygon(
+          0% 30%,
+          15% 30%,
+          15% 0%,
+          35% 0%,
+          35% 30%,
+          65% 30%,
+          65% 0%,
+          85% 0%,
+          85% 30%,
+          100% 30%,
+          100% 70%,
+          85% 70%,
+          85% 100%,
+          65% 100%,
+          65% 70%,
+          35% 70%,
+          35% 100%,
+          15% 100%,
+          15% 70%,
+          0% 70%
+        );
+      }
+
+      .badge {
+        position: absolute;
+        bottom: 50px;
+        right: 30px;
+        z-index: 4;
+        background: linear-gradient(135deg, #dc143c 0%, #c41230 100%);
+        color: #f4e94d;
+        padding: 25px 35px;
+        border-radius: 15px;
+        font-weight: 900;
+        font-size: 2rem;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        border: 5px solid #fff;
+        animation: pulse 2s infinite;
+      }
+
+      .badge::before {
+        content: "";
+        position: absolute;
+        inset: -8px;
+        border: 3px dotted #fff;
+        border-radius: 18px;
+      }
+
+      .badge-text-small {
+        font-size: 0.5em;
+        display: block;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .new-container {
+          flex-direction: column;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .left-section {
+          padding: 50px 40px;
+        }
+
+        .right-section {
+          min-height: 500px;
+        }
+
+        .puzzle-piece {
+          width: 350px;
+          height: 300px;
+          bottom: 80px;
+          right: 50px;
+        }
+
+        .badge {
+          font-size: 1.5rem;
+          padding: 20px 25px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        .left-section {
+          padding: 40px 30px;
+        }
+
+        .info-item {
+          font-size: 1rem;
+        }
+
+        .puzzle-piece {
+          width: 250px;
+          height: 200px;
+        }
+
+        .badge {
+          font-size: 1.2rem;
+          padding: 15px 20px;
+        }
+      }
+
+      /* Hide existing elements that conflict with new design */
+      .page-header-aibd,
+      .footer,
+      .back-to-top,
+      #spinner {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <!-- <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div> -->
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-map-marker-alt text-primary me-2"></small>
+            <small>3rd Floor, Square 9 Mall, New Bus Stand Jn, Kasaragod 671123</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center">
+            <small class="far fa-clock text-primary me-2"></small>
+            <small>Mon - Sat : 09.00 AM - 06.00 PM</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-phone-alt text-primary me-2"></small>
+            <small>+919072844144</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center mx-n2">
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href="https://wa.me/919072844144"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href="https://www.linkedin.com/company/cdcinternational-in/posts/?feedView=all"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0"
+              href="https://www.instagram.com/caddcentrekasaragod?utm_source=ig_web_button_share_sheet&igsh=aHU3cHh3MTd1dnV0"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+      <a
+        href="index.html"
+        class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
+      >
+        <div class="d-flex align-items-center gap-3">
+          <img
+            src="Public/CDC_Logo-03.svg"
+            alt="CDC Logo"
+            style="height: 50px"
+          />
+          <img
+            src="Public/CADD CENTRE LOGO SVG.svg"
+            alt="CADD Centre Logo"
+            style="height: 135px; margin-top: 15px"
+          />
+        </div>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+          <a href="courses.html" class="nav-item nav-link">Courses</a>
+          <div class="nav-item dropdown"></div>
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <a
+          href="index.html"
+          class="d-none d-lg-block py-4 px-lg-5 text-decoration-none text-dark"
+          >Back to CDC</a
+        >
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- New Design Implementation -->
+    <div class="new-container">
+      <div class="left-section">
+        <h1>Executive Diploma in<br />Architectural Design</h1>
+        <p class="subtitle">
+          Craft architectural masterpieces, achieve excellence through our
+          comprehensive design learning program.
+        </p>
+
+        <ul class="info-list">
+          <li class="info-item">
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <span>Duration: 400 hours</span>
+          </li>
+          <li class="info-item">
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+            <span>Time: 2 hours/ day</span>
+          </li>
+          <li class="info-item">
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+            </div>
+            <span>Mode: Part time</span>
+          </li>
+          <li class="info-item">
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <span>Venue: in-centre Program</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="right-section">
+        <div class="puzzle-piece"></div>
+        <!-- <div class="badge">
+          CDC
+          <span class="badge-text-small">CERTIFIED</span>
+        </div> -->
+        <!-- You can add an image here if needed -->
+        <!-- <img src="path-to-student-image.jpg" alt="Student" class="student-image"> -->
+      </div>
+    </div>
+
+    <!-- Page Header Start -->
+    <div
+      class="container-fluid page-header-aibd py-5 mb-5"
+      style="
+        background: linear-gradient(
+          135deg,
+          #e53935 0%,
+          #e35d5b 100%
+        ) !important;
+      "
+    >
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1
+              class="display-3 text-white mb-3 animated slideInDown fw-bold"
+              style="text: 2px 2px 8px"
+            >
+              <span
+                class="d-inline-block bg-warning text-dark px-3 py-2 rounded mb-2"
+                style="font-size: 2rem"
+              >
+                <i class="fa fa-certificate me-2"></i>
+                Executive Diploma in Architectural Design
+              </span>
+            </h1>
+            <p class="lead text-white mb-4" style="">
+              Advance your career with industry-leading Architectural Design
+              training, hands-on CAD tools, and globally recognized
+              certification.
+            </p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <img
+              src="Public/m-Architecture-Design.webp"
+              alt="Architectural Design"
+              class="img-fluid animated fadeInUp"
+              style="max-height: 220px"
+            />
+          </div>
+        </div>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb mb-0 bg-transparent p-0">
+            <li class="breadcrumb-item">
+              <a class="text-white-50" href="#"
+                ><i class="fa fa-home me-1"></i>Home</a
+              >
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-white-50" href="#"
+                ><i class="fa fa-book me-1"></i>Courses</a
+              >
+            </li>
+            <li class="breadcrumb-item text-warning active" aria-current="page">
+              Executive Diploma in Architectural Design
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Main Content Start -->
+
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <div class="card shadow-lg border-0 mb-5 p-4">
+            <div class="card-body">
+              <h2 class="main-heading text-center mb-4">
+                <i class="fa fa-certificate text-warning me-2"></i>
+                Executive Diploma in Architectural Design Training &
+                Certification Course
+              </h2>
+              <p class="lead text-secondary mb-4">
+                Embark on a captivating journey into architectural design with
+                our meticulously crafted Executive Diploma program. This
+                400-hour course seamlessly blends concepts, creativity, and
+                technical proficiency, providing a multidisciplinary approach to
+                building planning, design, and construction. Whether you're a
+                seasoned professional or an aspiring architect, this program is
+                designed to cater to your career aspirations.
+              </p>
+              <hr class="my-4" />
+
+              <h3 class="main-heading text-danger mb-3">
+                <i class="fa fa-lightbulb text-warning me-2"></i>Scope of Course
+              </h3>
+              <p>
+                The Executive Diploma program trains students in Architectural
+                Design that typically involves the use of specialized software
+                tools such as AutoCAD, Revit, 3ds Max, and Vray. These tools
+                allow engineers and architects to:
+              </p>
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">
+                  <span class="fa fa-check text-success me-2"></span>Create
+                  design and digital models of buildings and structures
+                </li>
+                <li class="list-group-item">
+                  <span class="fa fa-check text-success me-2"></span>Carry out
+                  design analysis and documentation
+                </li>
+                <li class="list-group-item">
+                  <span class="fa fa-check text-success me-2"></span>Optimize
+                  the layout of building systems
+                </li>
+              </ul>
+              <hr class="my-4" />
+
+              <h3 class="main-heading text-danger mb-3">
+                <i class="fa fa-briefcase text-warning me-2"></i>Career
+                Prospects / Job Roles
+              </h3>
+              <p>
+                Architectural design offers a challenging and rewarding career
+                with excellent growth opportunities. The demand for
+                Architectural designers who have completed an Executive Diploma
+                program is expected to increase due to the growing need for
+                sustainable and energy-efficient buildings, as well as the
+                increasing complexity of building systems. Trained Architectural
+                designers have a range of career opportunities in various
+                industries, including construction, architecture, engineering
+                consulting firms.
+              </p>
+              <p>
+                They can work on a variety of projects, including commercial
+                buildings, residential developments, hospitals, schools, and
+                industrial facilities. Architectural designers who are trained
+                and certified in CAD tools such as Revit, AutoCAD, 3ds Max, and
+                Vray and have gained expertise in the areas such as building
+                planning, design, and construction, can easily get placed as:
+              </p>
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">
+                  <i class="fa fa-user-tie text-success me-2"></i>Architect
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-user-cog text-success me-2"></i>Interior
+                  Designer
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-user-shield text-success me-2"></i>Design
+                  Educator/Instructor
+                </li>
+              </ul>
+              <hr class="my-4" />
+
+              <h3 class="main-heading text-danger mb-3">
+                <i class="fa fa-users text-warning me-2"></i>Ideal For
+              </h3>
+              <p>These Architectural Design courses are most suitable for:</p>
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">
+                  <i class="fa fa-user-graduate text-success me-2"></i>Civil
+                  Engineers who want to specialize in Architectural design
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-drafting-compass text-success me-2"></i
+                  >Architects who are passionate about efficient and sustainable
+                  designs of building systems
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-hard-hat text-success me-2"></i>Construction
+                  professionals
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-building text-success me-2"></i>Anybody who
+                  wants to build a career in Architectural design or
+                  construction management
+                </li>
+              </ul>
+              <hr class="my-4" />
+
+              <h3 class="main-heading text-danger mb-3">
+                <i class="fa fa-star text-warning me-2"></i>Key Differentiators
+              </h3>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i>Government
+                  accredited courses
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i>Practical
+                  approach to subjects
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i>Exposure
+                  to real-world projects
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i>Trainers
+                  with hands-on experience
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i>Worldwide
+                  certification approval
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i>Industry
+                  experts approved curriculum
+                </li>
+              </ul>
+
+              <!-- Salary Scale Chart -->
+              <div class="mt-5">
+                <h3 class="main-heading text-danger mb-4 text-center">
+                  <i class="fa fa-rupee-sign text-warning me-2"></i>Salary Scale
+                  for Architectural Design Engineers
+                </h3>
+                <div
+                  style="
+                    background: #faf4ed;
+                    padding: 30px;
+                    border-radius: 15px;
+                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+                  "
+                >
+                  <h4
+                    class="text-center mb-4"
+                    style="color: #7b3f8f; font-weight: 600"
+                  >
+                    Average Architectural Design Engineer Salary in India
+                  </h4>
+
+                  <div
+                    style="position: relative; height: 300px; margin: 20px 0"
+                  >
+                    <div
+                      style="
+                        position: absolute;
+                        left: 15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        color: #666;
+                        font-weight: 500;
+                      "
+                    >
+                      Salary Range
+                    </div>
+
+                    <div
+                      style="
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-around;
+                        padding: 0 30px;
+                      "
+                    >
+                      <div
+                        style="
+                          position: relative;
+                          width: 30%;
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                        "
+                      >
+                        <div
+                          style="
+                            color: #5a2d6f;
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                            text-align: center;
+                            font-size: 1.2em;
+                          "
+                        >
+                          2.5 Lakhs
+                        </div>
+                        <div
+                          style="
+                            width: 100%;
+                            position: relative;
+                            border-radius: 8px 8px 0 0;
+                            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+                            background: linear-gradient(
+                              135deg,
+                              #c94b9e 0%,
+                              #9b4f96 100%
+                            );
+                            height: 150px;
+                          "
+                        >
+                          <div
+                            style="
+                              position: absolute;
+                              color: white;
+                              font-size: 0.8em;
+                              text-align: center;
+                              width: 100%;
+                              opacity: 0.9;
+                              bottom: 50%;
+                              transform: translateY(50%);
+                            "
+                          >
+                            &lt; 1 Year
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        style="
+                          position: relative;
+                          width: 30%;
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                        "
+                      >
+                        <div
+                          style="
+                            color: #5a2d6f;
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                            text-align: center;
+                            font-size: 1.2em;
+                          "
+                        >
+                          3.8 Lakhs
+                        </div>
+                        <div
+                          style="
+                            width: 100%;
+                            position: relative;
+                            border-radius: 8px 8px 0 0;
+                            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+                            background: linear-gradient(
+                              135deg,
+                              #9b6db3 0%,
+                              #7b5fa3 100%
+                            );
+                            height: 210px;
+                          "
+                        >
+                          <div
+                            style="
+                              position: absolute;
+                              color: white;
+                              font-size: 0.8em;
+                              text-align: center;
+                              width: 100%;
+                              opacity: 0.9;
+                              bottom: 50%;
+                              transform: translateY(50%);
+                            "
+                          >
+                            1-3 Years
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        style="
+                          position: relative;
+                          width: 30%;
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                        "
+                      >
+                        <div
+                          style="
+                            color: #5a2d6f;
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                            text-align: center;
+                            font-size: 1.2em;
+                          "
+                        >
+                          5.3 Lakhs
+                        </div>
+                        <div
+                          style="
+                            width: 100%;
+                            position: relative;
+                            border-radius: 8px 8px 0 0;
+                            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+                            background: linear-gradient(
+                              135deg,
+                              #6b4c8a 0%,
+                              #4a2d5f 100%
+                            );
+                            height: 270px;
+                          "
+                        >
+                          <div
+                            style="
+                              position: absolute;
+                              color: white;
+                              font-size: 0.8em;
+                              text-align: center;
+                              width: 100%;
+                              opacity: 0.9;
+                              bottom: 50%;
+                              transform: translateY(50%);
+                            "
+                          >
+                            4-6 Years
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <svg
+                      style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        pointer-events: none;
+                      "
+                      viewBox="0 0 100 100"
+                      preserveAspectRatio="none"
+                    >
+                      <defs>
+                        <marker
+                          id="arrowhead1"
+                          markerWidth="10"
+                          markerHeight="10"
+                          refX="9"
+                          refY="3"
+                          orient="auto"
+                        >
+                          <polygon points="0 0, 10 3, 0 6" fill="white" />
+                        </marker>
+                      </defs>
+                      <line
+                        x1="25"
+                        y1="65"
+                        x2="35"
+                        y2="50"
+                        stroke="white"
+                        stroke-width="2"
+                        marker-end="url(#arrowhead1)"
+                      />
+
+                      <defs>
+                        <marker
+                          id="arrowhead2"
+                          markerWidth="10"
+                          markerHeight="10"
+                          refX="9"
+                          refY="3"
+                          orient="auto"
+                        >
+                          <polygon points="0 0, 10 3, 0 6" fill="white" />
+                        </marker>
+                      </defs>
+                      <line
+                        x1="50"
+                        y1="50"
+                        x2="60"
+                        y2="35"
+                        stroke="white"
+                        stroke-width="2"
+                        marker-end="url(#arrowhead2)"
+                      />
+                    </svg>
+                  </div>
+
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-around;
+                      align-items: center;
+                      margin-top: 15px;
+                      flex-wrap: wrap;
+                    "
+                  >
+                    <div style="text-align: center; width: 30%; margin: 10px 0">
+                      <div
+                        style="color: #5a5a5a; font-weight: 500; font-size: 1em"
+                      >
+                        Less than 1 year
+                      </div>
+                    </div>
+                    <div style="text-align: center; width: 30%; margin: 10px 0">
+                      <div
+                        style="color: #5a5a5a; font-weight: 500; font-size: 1em"
+                      >
+                        1 - 3 Yrs
+                      </div>
+                    </div>
+                    <div style="text-align: center; width: 30%; margin: 10px 0">
+                      <div
+                        style="color: #5a5a5a; font-weight: 500; font-size: 1em"
+                      >
+                        4 - 6 Yrs
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="text-center mt-4"
+                    style="color: #5a2d6f; font-weight: 500"
+                  >
+                    <i class="fa fa-lightbulb me-2"></i>Complete our Executive
+                    Diploma to accelerate your career growth
+                  </div>
+                </div>
+              </div>
+              <!-- End Salary Scale Chart -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card shadow-lg border-0 p-4 mb-5 sticky-enroll-card">
+            <div class="card-body">
+              <h4 class="text-center mb-4">Enroll Now</h4>
+              <form id="enrollmentForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control form-control-sm"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="mobile" class="form-label">Mobile Number</label>
+                  <input
+                    type="tel"
+                    class="form-control form-control-sm"
+                    id="mobile"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="course" class="form-label">Course</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="course"
+                    readonly
+                    value="Executive Diploma in Architectural Design"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label"
+                    >Message (Optional)</label
+                  >
+                  <textarea
+                    class="form-control form-control-sm"
+                    id="message"
+                    rows="2"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-success btn-sm w-100"
+                  style="
+                    background-color: #25d366;
+                    border-color: #25d366;
+                    color: white;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    transition: all 0.3s ease;
+                  "
+                  onmouseover="this.style.backgroundColor='#1DA851'; this.style.borderColor='#1DA851';"
+                  onmouseout="this.style.backgroundColor='#25D366'; this.style.borderColor='#25D366';"
+                >
+                  <i class="fab fa-whatsapp me-2"></i>Enroll via WhatsApp
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Content End -->
+    <!-- Footer Start -->
+    <footer
+      class="container-fluid bg-dark text-light footer py-6 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <!-- Contact Info -->
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <h4 class="text-warning mb-4">Get In Touch</h4>
+
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3 text-warning"></i>3rd Floor, Square 9 Mall, New Bus Stand Jn, Kasaragod 671123
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3 text-warning"></i>+919072844144
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3 text-warning"></i
+              >kl.kasargod@caddcentre.com
+            </p>
+          </div>
+          <!-- Quick Links -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h4 class="text-warning mb-4">Quick Links</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a class="btn btn-link text-light" href="about.html"
+                  ><i class="fa fa-angle-right me-2"></i>About Us</a
+                >
+              </li>
+              <li>
+                <a class="btn btn-link text-light" href="contact.html"
+                  ><i class="fa fa-angle-right me-2"></i>Contact Us</a
+                >
+              </li>
+              <li>
+                <a class="btn btn-link text-light" href="services.html"
+                  ><i class="fa fa-angle-right me-2"></i>Our Services</a
+                >
+              </li>
+              <li>
+                <a class="btn btn-link text-light" href="privacypolicy.html"
+                  ><i class="fa fa-angle-right me-2"></i>Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a class="btn btn-link text-light" href="support.html"
+                  ><i class="fa fa-angle-right me-2"></i>Support</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-5 col-md-12">
+            <h4 class="text-warning mb-4">Follow Us</h4>
+            <div class="d-flex mb-3">
+              <a
+                class="btn btn-square btn-outline-light me-2"
+                href="https://www.instagram.com/caddcentrekasaragod?utm_source=ig_web_button_share_sheet&igsh=aHU3cHh3MTd1dnV0"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="btn btn-square btn-outline-light me-2"
+                href="https://www.youtube.com/@caddcentrekasaragod840"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                class="btn btn-square btn-outline-light"
+                href="https://www.linkedin.com/company/cdcinternational-in/posts/?feedView=all"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+            <p class="mt-3 mb-0 small text-secondary">
+              Stay connected for updates, events, and more!
+            </p>
+          </div>
+        </div>
+        <hr class="bg-light my-4" />
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a href="#" class="text-warning">Cadd-Centre Kasaragod</a>,
+            All Rights Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <span class="small">Designed by CDC Team</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- WhatsApp Form Submission -->
+    <script>
+      document
+        .getElementById("enrollmentForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const mobile = document.getElementById("mobile").value;
+          const course = document.getElementById("course").value;
+          const message = document.getElementById("message").value;
+
+          // Create WhatsApp message
+          const whatsappMessage = `Hello, I would like to enroll in the course.
+        
+Name: ${name}
+Email: ${email}
+Mobile: ${mobile}
+Course: ${course}
+Message: ${message || "No additional message"}`;
+
+          // Encode message for URL
+          const encodedMessage = encodeURIComponent(whatsappMessage);
+
+          // WhatsApp URL (replace with actual phone number)
+          const whatsappUrl = `https://wa.me/919072844144?text=${encodedMessage}`;
+
+          // Redirect to WhatsApp
+          window.open(whatsappUrl, "_blank");
+        });
+    </script>
+
+    <!-- AI Chatbot -->
+    <script src="js/ai-chatbot.js"></script>
+  </body>
+</html>
+

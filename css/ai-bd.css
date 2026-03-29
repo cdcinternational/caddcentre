@@ -1,0 +1,100 @@
+/* Main Content Styling */
+.container.py-5 {
+    border-radius: 12px; /* Slightly more rounded corners */
+    padding: 3.5rem 2.5rem; /* Increased padding for more space */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Softer, more spread-out shadow */
+    
+}
+
+.container.py-5 h2 {
+    color: #343a40; /* Darker grey for headings */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 1.8rem; /* More spacing below headings */
+    border-bottom: 2px solid #e9ecef; /* Lighter, subtle border below headings */
+    padding-bottom: 0.8rem; /* Increased padding below headings */
+    font-size: 2.2rem; /* Slightly larger font size for main heading */
+}
+
+.container.py-5 h3 {
+    color: #495057; /* Slightly lighter grey for subheadings */
+    font-weight: 600; /* Semi-bold font weight */
+    margin-bottom: 1.2rem; /* Spacing below subheadings */
+    font-size: 1.7rem; /* Appropriate font size for subheadings */
+}
+
+.container.py-5 p {
+    color: #6c757d; /* Light grey color for paragraphs */
+    font-size: 1.05rem; /* Slightly larger font size */
+    line-height: 1.9; /* Increased line height for readability */
+    margin-bottom: 1.6rem; /* Spacing below paragraphs */
+}
+
+.container.py-5 ul {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 0; /* Remove default padding */
+    margin-bottom: 1.8rem; /* Spacing below lists */
+}
+
+.container.py-5 ul li {
+    padding-left: 35px; /* Space for the custom bullet */
+    position: relative; /* Needed for absolute positioning of custom bullet */
+    color: #495057; /* Dark grey color for list items */
+    font-size: 1.05rem; /* Standard font size */
+    line-height: 1.7; /* Increased line height for readability */
+    margin-bottom: 0.7rem; /* Spacing below list items */
+}
+
+.container.py-5 ul li .fa-check, .container.py-5 ul li .fa-user-tie, .container.py-5 ul li .fa-user-cog, .container.py-5 ul li .fa-user-shield, .container.py-5 ul li .fa-user-graduate, .container.py-5 ul li .fa-drafting-compass, .container.py-5 ul li .fa-hard-hat, .container.py-5 ul li .fa-building, .container.py-5 ul li .fa-check-circle {
+    color: #28a745; /* Bootstrap success green for icons */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Additional Styling for Better Aesthetics */
+.container.py-5 a {
+    color: #007bff; /* Bootstrap primary color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.container.py-5 a:hover {
+    color: #0056b3; /* Darker shade on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.card {
+    border: 1px solid #e0e0e0; /* Subtle border for cards */
+    border-radius: 12px; /* Rounded corners for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.main-heading i {
+    margin-right: 10px; /* Space between icon and text in main headings */
+}
+
+.text-warning {
+    color: #ffc107 !important; /* Ensure warning color is consistent */
+}
+
+.text-danger {
+    color: #dc3545 !important; /* Ensure danger color is consistent */
+}
+
+.text-secondary {
+    color: #6c757d !important; /* Ensure secondary color is consistent */
+}
+
+.lead {
+    font-weight: 400; /* Standard font weight for lead text */
+}
+
+.hr {
+    border-top: 1px solid rgba(0, 0, 0, .1); /* Lighter hr */
+}

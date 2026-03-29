@@ -1,0 +1,723 @@
+/* ========================================
+   PREMIUM COURSES LISTING PAGE DESIGN
+   ========================================
+   
+   Ultra-modern, stunning design for courses.html
+   with advanced animations and premium effects
+   ======================================== */
+
+/* ========================================
+   0. COLUMN BACKGROUND REMOVAL
+   ======================================== */
+
+/* Remove background from course card columns */
+.col-lg-4.col-md-6.wow.fadeInUp,
+.col-lg-4.col-md-6 {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Remove background from first 5 course cards */
+.col-lg-4.col-md-6:nth-child(1) .courses-item,
+.col-lg-4.col-md-6:nth-child(2) .courses-item,
+.col-lg-4.col-md-6:nth-child(3) .courses-item,
+.col-lg-4.col-md-6:nth-child(4) .courses-item,
+.col-lg-4.col-md-6:nth-child(5) .courses-item {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* ========================================
+   1. PAGE HEADER ENHANCEMENTS
+   ======================================== */
+
+/* Premium animated gradient background */
+.page-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%) !important;
+    background-size: 400% 400%;
+    animation: gradientWave 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+@keyframes gradientWave {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Floating particles effect */
+.page-header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    animation: particleFloat 20s ease-in-out infinite;
+}
+
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, -30px);
+    }
+}
+
+/* Enhanced decorative elements */
+.decorative-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    animation: floatCircle 20s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes floatCircle {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(50px, -50px) scale(1.2);
+    }
+}
+
+.decorative-square {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+    position: absolute;
+    bottom: 15%;
+    left: 7%;
+    transform: rotate(45deg);
+    animation: rotateFloat 25s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rotateFloat {
+    0% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+
+    50% {
+        transform: rotate(225deg) translate(30px, 30px);
+    }
+
+    100% {
+        transform: rotate(405deg) translate(0, 0);
+    }
+}
+
+/* ========================================
+   2. FILTER BUTTONS ENHANCEMENT
+   ======================================== */
+
+/* Premium filter buttons */
+.btn-outline-primary {
+    border: 2px solid #ed1c23;
+    color: #ed1c23;
+    background: transparent;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+.btn-outline-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ed1c23 0%, #fbb034 100%);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    z-index: -1;
+}
+
+.btn-outline-primary:hover::before,
+.btn-outline-primary.active::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
+    color: white;
+    border-color: #ed1c23;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(237, 28, 35, 0.3);
+}
+
+/* ========================================
+   3. COURSE CARDS ENHANCEMENT
+   ======================================== */
+
+/* Ultra-premium course cards */
+.courses-item {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 25px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent !important;
+}
+
+/* Gradient border animation */
+.gradient-border {
+    position: relative;
+    background: linear-gradient(135deg, #ed1c23 0%, #fbb034 50%, #ed1c23 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+    padding: 3px;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.gradient-border .courses-item {
+    border-radius: calc(25px - 3px) !important;
+    margin: 0;
+}
+
+/* Card hover effect */
+.courses-item:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow:
+        0 20px 50px rgba(237, 28, 35, 0.2),
+        0 0 0 1px rgba(237, 28, 35, 0.1);
+}
+
+/* Shimmer effect on hover */
+.courses-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 70%);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.courses-item:hover::before {
+    opacity: 1;
+    animation: shimmerSweep 1.5s ease-in-out;
+}
+
+@keyframes shimmerSweep {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+/* ========================================
+   4. COURSE IMAGE ENHANCEMENT
+   ======================================== */
+
+/* Premium image container */
+.courses-item .position-relative {
+    overflow: hidden;
+    border-radius: 22px 22px 0 0;
+}
+
+.courses-item img {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.95);
+}
+
+.courses-item:hover img {
+    transform: scale(1.1) rotate(2deg);
+    filter: brightness(1.05);
+}
+
+/* ========================================
+   5. BADGE ENHANCEMENT
+   ======================================== */
+
+/* Premium badges */
+.badge {
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.badge.bg-danger {
+    background: linear-gradient(135deg, #ed1c23 0%, #c41e3a 100%) !important;
+}
+
+.badge.bg-warning {
+    background: linear-gradient(135deg, #fbb034 0%, #f39c12 100%) !important;
+}
+
+.badge.bg-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+}
+
+.badge.bg-primary {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+}
+
+.courses-item:hover .badge {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   6. OVERLAY ENHANCEMENT
+   ======================================== */
+
+/* Premium overlay */
+.courses-overlay {
+    background: linear-gradient(135deg, rgba(237, 28, 35, 0.95) 0%, rgba(251, 176, 52, 0.95) 100%);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+}
+
+.courses-item:hover .courses-overlay {
+    opacity: 1;
+}
+
+/* Overlay buttons */
+.courses-overlay .btn {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.courses-item:hover .courses-overlay .btn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.courses-overlay .btn:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.courses-overlay .btn:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.courses-overlay .btn-primary {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    color: #ed1c23;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.courses-overlay .btn-primary:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+.courses-overlay .btn-success {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.courses-overlay .btn-success:hover {
+    background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* ========================================
+   7. CARD CONTENT ENHANCEMENT
+   ======================================== */
+
+/* Course title */
+.courses-item h5 {
+    background: linear-gradient(135deg, #ed1c23 0%, #fbb034 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+}
+
+.courses-item:hover h5 {
+    transform: scale(1.05);
+}
+
+/* Course description */
+.courses-item p {
+    color: #6c757d;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.courses-item:hover p {
+    color: #495057;
+}
+
+/* Price styling */
+.courses-item .text-primary.fw-bold {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #ed1c23 0%, #fbb034 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========================================
+   8. READ MORE BUTTON ENHANCEMENT
+   ======================================== */
+
+/* Premium read more button */
+.btn-outline-danger {
+    border: 2px solid #ed1c23;
+    color: #ed1c23;
+    background: transparent;
+    border-radius: 50px;
+    padding: 12px 32px;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.btn-outline-danger::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ed1c23 0%, #fbb034 100%);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    z-index: -1;
+}
+
+.btn-outline-danger:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-outline-danger:hover {
+    color: white;
+    border-color: #ed1c23;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(237, 28, 35, 0.3);
+}
+
+/* ========================================
+   9. SECTION HEADING ENHANCEMENT
+   ======================================== */
+
+/* Premium section heading */
+.text-center.mx-auto h1 {
+    background: linear-gradient(135deg, #d90429 0%, #ed1c23 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    display: inline-block;
+}
+
+.text-center.mx-auto h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #ed1c23 0%, #fbb034 100%);
+    border-radius: 2px;
+}
+
+/* ========================================
+   10. BREADCRUMB ENHANCEMENT
+   ======================================== */
+
+/* Premium breadcrumb */
+.breadcrumb {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 18px 25px;
+    border-radius: 50px;
+    margin-top: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: '→';
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 12px;
+    font-weight: 600;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.breadcrumb-item a:hover {
+    color: #fbb034 !important;
+    transform: translateX(3px);
+    display: inline-block;
+}
+
+/* ========================================
+   11. STAGGERED ANIMATION
+   ======================================== */
+
+/* Staggered fade-in for course cards */
+.courses-item {
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.col-lg-4:nth-child(1) .courses-item {
+    animation-delay: 0.1s;
+}
+
+.col-lg-4:nth-child(2) .courses-item {
+    animation-delay: 0.2s;
+}
+
+.col-lg-4:nth-child(3) .courses-item {
+    animation-delay: 0.3s;
+}
+
+.col-lg-4:nth-child(4) .courses-item {
+    animation-delay: 0.4s;
+}
+
+.col-lg-4:nth-child(5) .courses-item {
+    animation-delay: 0.5s;
+}
+
+.col-lg-4:nth-child(6) .courses-item {
+    animation-delay: 0.6s;
+}
+
+.col-lg-4:nth-child(7) .courses-item {
+    animation-delay: 0.7s;
+}
+
+.col-lg-4:nth-child(8) .courses-item {
+    animation-delay: 0.8s;
+}
+
+.col-lg-4:nth-child(9) .courses-item {
+    animation-delay: 0.9s;
+}
+
+/* ========================================
+   12. RESPONSIVE ENHANCEMENTS
+   ======================================== */
+
+/* Tablet adjustments */
+@media (max-width: 992px) {
+    .page-header {
+        min-height: 350px;
+    }
+
+    .decorative-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .decorative-square {
+        width: 120px;
+        height: 120px;
+    }
+
+    .courses-item:hover {
+        transform: translateY(-10px) scale(1.01);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .page-header {
+        min-height: 300px;
+    }
+
+    .btn-outline-primary,
+    .btn-outline-danger {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    .courses-item {
+        border-radius: 20px !important;
+    }
+
+    .courses-item:hover {
+        transform: translateY(-8px) scale(1.01);
+    }
+
+    .decorative-element {
+        display: none;
+    }
+
+    .badge {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 576px) {
+    .page-header {
+        min-height: 280px;
+    }
+
+    .courses-item img {
+        height: 180px !important;
+    }
+
+    .btn-outline-primary,
+    .btn-outline-danger {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* ========================================
+   13. ACCESSIBILITY
+   ======================================== */
+
+/* Focus states */
+.btn-outline-primary:focus,
+.btn-outline-danger:focus {
+    outline: 3px solid rgba(237, 28, 35, 0.5);
+    outline-offset: 4px;
+}
+
+.courses-item:focus-within {
+    outline: 3px solid rgba(237, 28, 35, 0.5);
+    outline-offset: 4px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================
+   14. PRINT STYLES
+   ======================================== */
+
+@media print {
+
+    .courses-item,
+    .btn-outline-primary,
+    .btn-outline-danger {
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    .decorative-element,
+    .page-header::after,
+    .courses-overlay {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   15. UTILITY CLASSES
+   ======================================== */
+
+/* Hover lift utility */
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+/* Gradient text utility */
+.gradient-text {
+    background: linear-gradient(135deg, #ed1c23 0%, #fbb034 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Premium shadow utility */
+.shadow-premium {
+    box-shadow: 0 15px 45px rgba(237, 28, 35, 0.2);
+}

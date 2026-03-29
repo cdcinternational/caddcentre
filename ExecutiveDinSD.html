@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cadd-Centre Kasaragod</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+    <link rel="stylesheet" href="css/ai-bd.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link href="Public/fav-icon.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Custom CSS for main content heading -->
+    <style>
+      .main-heading {
+        border: 2px solid red;
+        color: red;
+        padding: 10px;
+        /* background-color: white; */
+      }
+
+      /* Attractive CDC Button Styles */
+      .attractive-cdc-button {
+        background: linear-gradient(135deg, #ed1c23 0%, #fbb034 100%);
+        color: white;
+        font-weight: 700;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(237, 28, 35, 0.3);
+        overflow: hidden;
+        position: relative;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 10px 20px; /* Further reduced padding */
+        font-size: 12px; /* Further reduced font size */
+      }
+
+      .attractive-cdc-button:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(237, 28, 35, 0.4);
+        color: white;
+      }
+
+      .attractive-cdc-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: all 0.5s;
+      }
+
+      .attractive-cdc-button:hover::before {
+        left: 100%;
+      }
+
+      .attractive-cdc-button i {
+        transition: transform 0.3s ease;
+        font-size: 10px; /* Further reduced icon size */
+      }
+
+      .attractive-cdc-button:hover i {
+        transform: translateX(1px); /* Reduced icon movement */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-light p-0">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-map-marker-alt text-primary me-2"></small>
+            <small>3rd Floor, Square 9 Mall, New Bus Stand Jn, Kasaragod 671123</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center">
+            <small class="far fa-clock text-primary me-2"></small>
+            <small>Mon - Sat : 09.00 AM - 06.00 PM</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <small class="fa fa-phone-alt text-primary me-2"></small>
+            <small>+919072844144</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center mx-n2">
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href="https://wa.me/919072844144"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+              href="https://www.linkedin.com/company/cdcinternational-in/posts/?feedView=all"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              class="btn btn-square btn-link rounded-0"
+              href="https://www.instagram.com/caddcentrekasaragod?utm_source=ig_web_button_share_sheet&igsh=aHU3cHh3MTd1dnV0"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+      <a
+        href="index.html"
+        class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
+      >
+        <div class="d-flex align-items-center gap-3">
+          <img
+            src="Public/CDC_Logo-03.svg"
+            alt="CDC Logo"
+            style="height: 50px"
+          />
+          <img
+            src="Public/CADD CENTRE LOGO SVG.svg"
+            alt="CADD Centre Logo"
+            style="height: 135px; margin-top: 15px"
+          />
+        </div>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+          <a href="courses.html" class="nav-item nav-link">Courses</a>
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <a
+          href="index.html"
+          class="d-none d-lg-block py-4 px-lg-5 text-decoration-none text-dark"
+          >Back to CDC</a
+        >
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div
+      class="container-fluid page-header-aibd py-5 mb-5"
+      style="
+        background: linear-gradient(
+          135deg,
+          #e53935 0%,
+          #e35d5b 100%
+        ) !important;
+      "
+    >
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1
+              class="display-3 text-white mb-3 animated slideInDown fw-bold"
+              style="text: 2px 2px 8px"
+            >
+              <span
+                class="d-inline-block bg-warning text-dark px-3 py-2 rounded mb-2"
+                style="font-size: 2rem"
+              >
+                <i class="fa fa-certificate me-2"></i>
+                Executive Diploma in Structural Design
+              </span>
+            </h1>
+            <p class="lead text-white mb-4" style="">
+              Advance your career with industry-leading Structural Design
+              training, hands-on CAD tools, and globally recognized
+              certification.
+            </p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <img
+              src="Public/e-sd.webp"
+              alt="Structural Design"
+              class="img-fluid animated fadeInUp"
+              style="max-height: 220px"
+            />
+          </div>
+        </div>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb mb-0 bg-transparent p-0">
+            <li class="breadcrumb-item">
+              <a class="text-white-50" href="#"
+                ><i class="fa fa-home me-1"></i>Home</a
+              >
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-white-50" href="#"
+                ><i class="fa fa-book me-1"></i>Courses</a
+              >
+            </li>
+            <li class="breadcrumb-item text-warning active" aria-current="page">
+              Executive Diploma in Structural Design
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Main Content Start -->
+
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <div class="card shadow-lg border-0 mb-5 p-4">
+            <div class="card-body">
+              <h2 class="main-heading text-center mb-4">
+                <i class="fa fa-certificate text-warning me-2"></i>
+                Executive Diploma in Structural Design Training & Certification
+                Course
+              </h2>
+              <p class="lead text-secondary mb-4">
+                The Executive Diploma in Structural Design & Analysis provides a
+                comprehensive training program, covering key areas such as
+                structural design principles, manual calculations, detailing,
+                estimation, and analysis using industry-leading software.
+                Whether you seek upskilling, career advancement, or a role
+                transition, this diploma equips you with the knowledge and
+                practical expertise for a competitive edge in the industry and
+                job market.
+              </p>
+              <hr class="my-4" />
+
+              <h3 class="main-heading text-danger mb-3">
+                <i class="fa fa-lightbulb text-warning me-2"></i>Scope of Course
+              </h3>
+              <p>
+                The key areas of training offered in the Executive Diploma in
+                Structural Design are:
+              </p>
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">
+                  <span class="fa fa-check text-success me-2"></span>Structural
+                  manual calculations
+                </li>
+                <li class="list-group-item">
+                  <span class="fa fa-check text-success me-2"></span>Structural
+                  detailing
+                </li>
+                <li class="list-group-item">
+                  <span class="fa fa-check text-success me-2"></span>Estimation
+                  and Costing
+                </li>
+                <li class="list-group-item">
+                  <span class="fa fa-check text-success me-2"></span>Engineering
+                  Drawing using AutoCAD
+                </li>
+                <li class="list-group-item">
+                  <span class="fa fa-check text-success me-2"></span>Structural
+                  Analysis in ETABS
+                </li>
+                <li class="list-group-item">
+                  <span class="fa fa-check text-success me-2"></span>Structural
+                  Analysis and Design in Staad Pro
+                </li>
+                <li class="list-group-item">
+                  <span class="fa fa-check text-success me-2"></span>Structural
+                  and drafting standards
+                </li>
+              </ul>
+              <hr class="my-4" />
+
+              <h3 class="main-heading text-danger mb-3">
+                <i class="fa fa-briefcase text-warning me-2"></i>Career
+                Prospects / Job Roles
+              </h3>
+              <p>
+                Upon completing the Executive Diploma in Structural Design,
+                participants can explore employment opportunities in the
+                following roles:
+              </p>
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">
+                  <i class="fa fa-user-tie text-success me-2"></i>Structural
+                  Engineer
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-user-cog text-success me-2"></i>Architectural
+                  Drafter
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-user-shield text-success me-2"></i
+                  >Construction Project Manager
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-user-shield text-success me-2"></i>CAD
+                  Specialist
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-user-shield text-success me-2"></i>Bridge
+                  Engineer
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-user-shield text-success me-2"></i>Structural
+                  Analyst
+                </li>
+              </ul>
+              <hr class="my-4" />
+
+              <h3 class="main-heading text-danger mb-3">
+                <i class="fa fa-star text-warning me-2"></i>Program Highlights
+              </h3>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i>Students
+                  participate in continuous project assessments and receive
+                  support at every stage. Completion of module projects
+                  increases their chances of attending more job interviews upon
+                  successfully finishing the course.
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i
+                  >Mentorship: Industry-experienced mentors, certified by CADD
+                  Centre ITA, guide students in their career development.
+                  Monthly scheduled sessions facilitate this support.
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i>Expert-led
+                  Sessions: Our Engineering, Technology, Career (ETC) sessions,
+                  led by subject-matter experts, offer learners valuable
+                  real-world insights and practical knowledge, keeping them
+                  up-to-date with the latest industry trends.
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i>Career
+                  Guidance: A comprehensive career guidance program assists
+                  students in assessing their skills and readiness for the job
+                  market.
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i>Placement
+                  Assistance: CADD Centre's 'First Job Pakka' initiative
+                  provides placement support to eligible students after
+                  completing their course successfully.
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i
+                  >World-class courseware: Our meticulously designed course
+                  material upholds the highest standards, offering comprehensive
+                  subject coverage with practice exercises, integrating the
+                  latest industry advancements, and catering to diverse learning
+                  styles.
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-check-circle text-success me-2"></i>Learning
+                  Management System: Our robust LMS, accessible via a mobile
+                  app, provides convenient access to e-learning materials,
+                  certificates, and job opportunities.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card shadow-lg border-0 p-4 mb-5 sticky-enroll-card">
+            <div class="card-body">
+              <h4 class="text-center mb-4">Enroll Now</h4>
+              <form id="enrollmentForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control form-control-sm"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="mobile" class="form-label">Mobile Number</label>
+                  <input
+                    type="tel"
+                    class="form-control form-control-sm"
+                    id="mobile"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="course" class="form-label">Course</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="course"
+                    readonly
+                    value="Executive Diploma in Structural Design"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label"
+                    >Message (Optional)</label
+                  >
+                  <textarea
+                    class="form-control form-control-sm"
+                    id="message"
+                    rows="2"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-success btn-sm w-100"
+                  style="
+                    background-color: #25d366;
+                    border-color: #25d366;
+                    color: white;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    transition: all 0.3s ease;
+                  "
+                  onmouseover="this.style.backgroundColor='#1DA851'; this.style.borderColor='#1DA851';"
+                  onmouseout="this.style.backgroundColor='#25D366'; this.style.borderColor='#25D366';"
+                >
+                  <i class="fab fa-whatsapp me-2"></i>Enroll via WhatsApp
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content End -->
+    <!-- Footer Start -->
+    <footer
+      class="container-fluid bg-dark text-light footer py-6 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <!-- Contact Info -->
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <h4 class="text-warning mb-4">Get In Touch</h4>
+
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3 text-warning"></i>3rd Floor, Square 9 Mall, New Bus Stand Jn, Kasaragod 671123
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3 text-warning"></i>+919072844144
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3 text-warning"></i
+              >kl.kasargod@caddcentre.com
+            </p>
+          </div>
+          <!-- Quick Links -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h4 class="text-warning mb-4">Quick Links</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a class="btn btn-link text-light" href="about.html"
+                  ><i class="fa fa-angle-right me-2"></i>About Us</a
+                >
+              </li>
+              <li>
+                <a class="btn btn-link text-light" href="contact.html"
+                  ><i class="fa fa-angle-right me-2"></i>Contact Us</a
+                >
+              </li>
+              <li>
+                <a class="btn btn-link text-light" href="services.html"
+                  ><i class="fa fa-angle-right me-2"></i>Our Services</a
+                >
+              </li>
+              <li>
+                <a class="btn btn-link text-light" href="privacypolicy.html"
+                  ><i class="fa fa-angle-right me-2"></i>Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a class="btn btn-link text-light" href="support.html"
+                  ><i class="fa fa-angle-right me-2"></i>Support</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-5 col-md-12">
+            <h4 class="text-warning mb-4">Follow Us</h4>
+            <div class="d-flex mb-3">
+              <a
+                class="btn btn-square btn-outline-light me-2"
+                href="https://www.instagram.com/caddcentrekasaragod?utm_source=ig_web_button_share_sheet&igsh=aHU3cHh3MTd1dnV0"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="btn btn-square btn-outline-light me-2"
+                href="https://www.youtube.com/@caddcentrekasaragod840"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                class="btn btn-square btn-outline-light"
+                href="https://www.linkedin.com/company/cdcinternational-in/posts/?feedView=all"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+            <p class="mt-3 mb-0 small text-secondary">
+              Stay connected for updates, events, and more!
+            </p>
+          </div>
+        </div>
+        <hr class="bg-light my-4" />
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a href="#" class="text-warning">Cadd-Centre Kasargod</a>,
+            All Rights Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <span class="small">Designed by CDC Team</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- AI Chatbot -->
+    <script src="js/ai-chatbot.js"></script>
+  </body>
+</html>
+

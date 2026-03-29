@@ -1,0 +1,110 @@
+:root {
+  --primary: #d32f2f;
+  --text: #333;
+  --max-width: 1200px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Work Sans', sans-serif; color: var(--text); line-height: 1.6; }
+a { text-decoration: none; }
+
+/* Hero */
+.hero {
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; text-align: center;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: relative; color: #fff; width: 90%; max-width: 700px;
+}
+.hero h1 { font-size: 2rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+.btn-primary {
+  background: var(--primary); color: #fff;
+  padding: .75rem 1.5rem; border-radius:4px;
+  font-size:1rem; display:inline-block;
+  transition: background .3s, transform .2s;
+}
+.btn-primary:hover {
+  background: #b71c1c;
+  transform: translateY(-2px);
+}
+
+/* Intro Features */
+.intro {
+  padding: 3rem 1rem; max-width: var(--max-width); margin: auto;
+  text-align: center;
+}
+.features {
+  list-style: none; display: grid; gap: 1rem;
+}
+.features li {
+  background: #f9f9f9; padding: 1rem; border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Curriculum Cards */
+#curriculum {
+  padding: 3rem 1rem;
+  max-width: var(--max-width); margin: auto;
+  text-align: center;
+}
+.cards {
+  display: grid; gap: 1.5rem;
+}
+.card {
+  padding:1.5rem;
+  border: 1px solid #eee;
+  border-radius:8px;
+  transition: box-shadow .3s;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Testimonials */
+.testimonials {
+  background: #f4f4f4;
+  padding:3rem 1rem;
+  text-align: center;
+}
+.testimonials blockquote {
+  font-style: italic;
+  margin:1rem auto;
+  max-width:700px;
+}
+
+/* CTA Section */
+.cta-section {
+  padding:3rem 1rem;
+  text-align:center;
+}
+.cta-section h2 {
+  margin-bottom:1.5rem;
+}
+
+/* Footer */
+footer {
+  background:#222; color:#fff; text-align:center;
+  padding:1rem; font-size:.9rem;
+}
+
+/* Responsiveness */
+@media(min-width:768px) {
+  .hero h1 { font-size:3rem; }
+  .hero p { font-size:1.25rem; }
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media(min-width:1200px) {
+  .hero h1 { font-size:4rem; }
+  .hero p { font-size:1.5rem; }
+}

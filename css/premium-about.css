@@ -1,0 +1,531 @@
+/* ========================================
+   PREMIUM ABOUT PAGE ENHANCEMENTS
+   ========================================
+   
+   Additional ultra-modern enhancements for about.html
+   to complement existing inline styles
+   ======================================== */
+
+/* ========================================
+   1. ENHANCED PAGE HEADER
+   ======================================== */
+
+/* Additional animated gradient overlay */
+.page-header {
+    background: linear-gradient(135deg, #ed1c23 0%, #fbb034 50%, #ed1c23 100%) !important;
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Floating particles in header */
+.page-header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+    animation: particleMove 20s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes particleMove {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, -30px);
+    }
+}
+
+/* Enhanced breadcrumb */
+.breadcrumb {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 18px 25px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: '→';
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 12px;
+    font-weight: 600;
+}
+
+/* ========================================
+   2. CONTENT CONTAINER ENHANCEMENTS
+   ======================================== */
+
+/* Shimmer effect on hover */
+.about-content-container::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 70%);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.about-content-container:hover::after {
+    opacity: 1;
+    animation: shimmer 2s ease-in-out;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+/* ========================================
+   3. STATISTICS SECTION ENHANCEMENTS
+   ======================================== */
+
+/* Counter animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stats-number {
+    animation: countUp 1s ease-out;
+}
+
+/* Pulsing icon effect */
+@keyframes iconPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(237, 28, 35, 0.3);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(237, 28, 35, 0.5);
+    }
+}
+
+.stats-icon {
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+/* ========================================
+   4. MISSION & VISION ENHANCEMENTS
+   ======================================== */
+
+/* Card glow effect */
+.mission-vision-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-vision-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #ed1c23 0%, #fbb034 100%);
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mission-vision-card:hover::before {
+    opacity: 0.1;
+}
+
+/* Icon rotation on hover */
+.mission-vision-icon {
+    transition: all 0.3s ease;
+}
+
+.mission-vision-card:hover .mission-vision-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* ========================================
+   5. TEAM SECTION ENHANCEMENTS
+   ======================================== */
+
+/* Enhanced card border */
+.team-member-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ed1c23 0%, #fbb034 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.team-member-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Social icon animations */
+.social-icon {
+    animation: fadeInScale 0.3s ease-out both;
+}
+
+.social-icon:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.social-icon:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.social-icon:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   6. VIDEO CONTAINER ENHANCEMENTS
+   ======================================== */
+
+/* Play button overlay */
+.about-video-container {
+    position: relative;
+}
+
+.about-video-container::after {
+    content: '\f04b';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: white;
+    background: rgba(237, 28, 35, 0.8);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-video-container:hover::after {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: rgba(251, 176, 52, 0.9);
+}
+
+/* ========================================
+   7. DECORATIVE ELEMENTS ENHANCEMENTS
+   ======================================== */
+
+/* Enhanced floating animations */
+.decorative-circle,
+.decorative-square,
+.decorative-triangle,
+.decorative-star {
+    filter: blur(1px);
+}
+
+/* Glow effect on decorative elements */
+.decorative-circle {
+    box-shadow: 0 0 40px rgba(237, 28, 35, 0.4);
+}
+
+.decorative-square {
+    box-shadow: 0 0 40px rgba(96, 165, 250, 0.4);
+}
+
+.decorative-triangle {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.4);
+}
+
+/* ========================================
+   8. FEATURE LIST ENHANCEMENTS
+   ======================================== */
+
+/* Gradient border on hover */
+.feature-list li {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-list li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(180deg, #ed1c23 0%, #fbb034 100%);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.feature-list li:hover::after {
+    transform: scaleY(1);
+}
+
+/* ========================================
+   9. SECTION TITLE ENHANCEMENTS
+   ======================================== */
+
+/* Animated underline */
+.section-title::after {
+    animation: expandWidth 1s ease-out;
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 60px;
+    }
+}
+
+/* Text gradient animation */
+.highlight-text {
+    background-size: 200% 200%;
+    animation: gradientText 3s ease infinite;
+}
+
+@keyframes gradientText {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* ========================================
+   10. BUTTON ENHANCEMENTS
+   ======================================== */
+
+/* Ripple effect on click */
+.attractive-cdc-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.attractive-cdc-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.attractive-cdc-button:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* ========================================
+   11. SCROLL ANIMATIONS
+   ======================================== */
+
+/* Fade in from bottom */
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wow.fadeInUp {
+    animation: fadeInBottom 0.8s ease-out;
+}
+
+/* ========================================
+   12. RESPONSIVE ENHANCEMENTS
+   ======================================== */
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+
+    .decorative-circle,
+    .decorative-square,
+    .decorative-triangle,
+    .decorative-star,
+    .decorative-dots {
+        display: none;
+    }
+
+    .about-video-container::after {
+        font-size: 3rem;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* ========================================
+   13. ACCESSIBILITY
+   ======================================== */
+
+/* Focus states */
+.attractive-cdc-button:focus,
+.social-icon:focus {
+    outline: 3px solid rgba(237, 28, 35, 0.5);
+    outline-offset: 4px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================
+   14. PRINT STYLES
+   ======================================== */
+
+@media print {
+
+    .decorative-circle,
+    .decorative-square,
+    .decorative-triangle,
+    .decorative-star,
+    .decorative-dots {
+        display: none !important;
+    }
+
+    .about-content-container,
+    .stats-card,
+    .mission-vision-card,
+    .team-member-card {
+        box-shadow: none !important;
+        transform: none !important;
+    }
+}
+
+/* ========================================
+   15. ADDITIONAL PREMIUM EFFECTS
+   ======================================== */
+
+/* Glassmorphism enhancement */
+.about-content-container,
+.stats-card,
+.mission-vision-card {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+    background: #ed1c23;
+    color: white;
+}
+
+::-moz-selection {
+    background: #ed1c23;
+    color: white;
+}
+
+/* Loading state for images */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img:not([src]) {
+    opacity: 0;
+}
+
+/* Hover lift utility */
+.hover-lift {
+    transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}

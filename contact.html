@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Cadd-Centre Kasargod</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
+
+  <!-- Favicon -->
+  <link href="Public/fav-icon.png" rel="icon" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!-- Premium Contact Page Design -->
+  <link href="css/premium-contact.css" rel="stylesheet" />
+
+  <style>
+    /* Enhanced Contact Form Styles */
+    .contact-form-container {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .contact-form-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(237, 28, 35, 0.15);
+    }
+
+    .contact-form-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #ed1c23 0%, #fbb034 100%);
+    }
+
+    .attractive-form-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .attractive-input {
+      border-radius: 1rem;
+      border-width: 2px;
+      box-shadow: 0 2px 12px rgba(17, 17, 17, 0.08);
+      transition: box-shadow 0.3s, border-color 0.3s;
+      padding: 1rem 1.25rem;
+      border: 2px solid #e9ecef;
+    }
+
+    .attractive-input:focus {
+      border-color: #ed1c23;
+      box-shadow: 0 4px 24px rgba(237, 28, 35, 0.15);
+    }
+
+    .form-floating>label {
+      padding: 1rem 1.25rem;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(90deg, #ed1c23 0%, #fbb034 100%);
+      color: #fff;
+      border: none;
+      box-shadow: 0 2px 12px rgba(237, 28, 35, 0.15);
+      transition: background 0.3s, box-shadow 0.3s;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .btn-gradient:hover {
+      background: linear-gradient(90deg, #fbb034 0%, #ed1c23 100%);
+      box-shadow: 0 6px 24px rgba(237, 28, 35, 0.25);
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    .btn-gradient::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 20px;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(30deg);
+      transition: all 0.6s;
+    }
+
+    .btn-gradient:hover::after {
+      left: 120%;
+    }
+
+    .attractive-btn {
+      border-radius: 2rem;
+    }
+
+    /* Attractive CDC Button Styles */
+    .attractive-cdc-button {
+      background: linear-gradient(135deg, #ed1c23 0%, #fbb034 100%);
+      color: white;
+      font-weight: 700;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(237, 28, 35, 0.3);
+      overflow: hidden;
+      position: relative;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 12px 25px;
+      /* Reduced padding */
+      font-size: 14px;
+      /* Reduced font size */
+    }
+
+    .attractive-cdc-button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(237, 28, 35, 0.4);
+      color: white;
+    }
+
+    .attractive-cdc-button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent);
+      transition: all 0.5s;
+    }
+
+    .attractive-cdc-button:hover::before {
+      left: 100%;
+    }
+
+    .attractive-cdc-button i {
+      transition: transform 0.3s ease;
+      font-size: 12px;
+      /* Reduced icon size */
+    }
+
+    .attractive-cdc-button:hover i {
+      transform: translateX(2px);
+      /* Reduced icon movement */
+    }
+
+    /* Enhanced Map Styles */
+    .map-container {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      height: 100%;
+      min-height: 300px;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .map-overlay {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      animation: pulse 2s infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .map-overlay:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(237, 28, 35, 0.4);
+      }
+
+      70% {
+        box-shadow: 0 0 0 15px rgba(237, 28, 35, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(237, 28, 35, 0);
+      }
+    }
+
+    /* Decorative Elements */
+    .decorative-element {
+      position: absolute;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .decorative-circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ed1c23, #fbb034);
+      top: 10%;
+      right: 5%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .decorative-square {
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, #60a5fa, #6366f1);
+      bottom: 15%;
+      left: 7%;
+      transform: rotate(45deg);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px) rotate(45deg);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(45deg);
+      }
+
+      100% {
+        transform: translateY(0px) rotate(45deg);
+      }
+    }
+
+    /* Contact Info Styles */
+    .contact-info-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid #ed1c23;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .contact-info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(237, 28, 35, 0.15);
+    }
+
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ed1c23 0%, #fbb034 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 5px 15px rgba(237, 28, 35, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .contact-info-card:hover .contact-icon {
+      transform: scale(1.1);
+    }
+
+    /* Social Icons Enhancement */
+    .attractive-footer-social {
+      display: flex;
+      gap: 16px;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .footer-social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      font-size: 1.7rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #60a5fa 0%, #6366f1 100%);
+      color: #fff;
+      box-shadow: 0 4px 18px rgba(60, 90, 154, 0.18);
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+      border: none;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-social-icon:hover {
+      transform: scale(1.15) rotate(-8deg);
+      box-shadow: 0 8px 24px rgba(60, 90, 154, 0.28);
+      background: linear-gradient(135deg, #6366f1 0%, #60a5fa 100%);
+      color: #fff;
+    }
+
+    .footer-social-icon.whatsapp {
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    }
+
+    .footer-social-icon.instagram {
+      background: linear-gradient(135deg, #fd1d1d 0%, #833ab4 100%);
+    }
+
+    .footer-social-icon.youtube {
+      background: linear-gradient(135deg, #ff0000 0%, #c4302b 100%);
+    }
+
+    .footer-social-icon.linkedin {
+      background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+    }
+
+    .footer-social-icon i {
+      pointer-events: none;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-social-icon:hover i {
+      transform: scale(1.2);
+    }
+
+    /* Additional Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .wow.fadeInUp {
+      animation-duration: 0.6s;
+    }
+
+    /* Page Header Enhancement */
+    .page-header {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg,
+          rgba(237, 28, 35, 0.8) 0%,
+          rgba(251, 176, 52, 0.8) 100%);
+      z-index: 1;
+    }
+
+    .page-header .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Mobile Responsive Styles */
+    @media (max-width: 991px) {
+
+      /* Adjust padding for smaller screens */
+      .contact-form-container {
+        padding: 1.5rem;
+      }
+
+      /* Reduce decorative elements on mobile */
+      .decorative-circle {
+        width: 100px;
+        height: 100px;
+        top: 5%;
+        right: 2%;
+      }
+
+      .decorative-square {
+        width: 80px;
+        height: 80px;
+        bottom: 10%;
+        left: 3%;
+      }
+
+      /* Adjust map container height */
+      .map-container {
+        height: 350px;
+        min-height: 350px;
+      }
+
+      /* Adjust buttons on mobile */
+      .btn-gradient,
+      .btn-success {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      /* Contact info cards on mobile */
+      .contact-info-card {
+        margin-bottom: 1.5rem;
+      }
+
+      /* Adjust row for mobile */
+      .row.g-5 {
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      /* Stack form buttons on mobile */
+      .col-12.d-flex.gap-3 {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .btn-gradient,
+      .btn-success {
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Adjust map overlay on mobile */
+      .map-overlay {
+        width: 60px;
+        height: 60px;
+      }
+
+      /* Reduce contact info card padding */
+      .contact-info-card {
+        padding: 1.5rem;
+      }
+
+      /* Adjust footer layout */
+      .attractive-footer-social {
+        justify-content: center;
+      }
+
+      /* Form adjustments for mobile */
+      .contact-form-container .row.g-3 {
+        gap: 0.5rem;
+      }
+
+      .contact-form-container .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 576px) {
+
+      /* Further reduce padding on very small screens */
+      .contact-form-container {
+        padding: 1rem;
+      }
+
+      /* Hide decorative elements on very small screens */
+      .decorative-element {
+        display: none;
+      }
+
+      /* Adjust form elements */
+      .form-floating>label {
+        padding: 0.75rem 1rem;
+      }
+
+      .attractive-input {
+        padding: 0.75rem 1rem;
+      }
+
+      /* Reduce map container height */
+      .map-container {
+        height: 250px;
+        min-height: 250px;
+      }
+
+      /* Adjust iframe for mobile */
+      .map-container iframe {
+        height: 250px !important;
+        min-height: 250px;
+      }
+
+      /* Adjust contact info cards */
+      .contact-info-card {
+        padding: 1rem;
+      }
+
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+      }
+
+      /* Adjust footer */
+      .footer-social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+      }
+
+      /* Footer adjustments for mobile */
+      .footer .row.g-5 {
+        gap: 1.5rem;
+      }
+
+      .footer .col-lg-4,
+      .footer .col-lg-3,
+      .footer .col-lg-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .footer .text-center.text-md-start,
+      .footer .text-center.text-md-end {
+        text-align: center !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" role="status"></div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-dark text-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+      <div class="col-lg-7 px-3 px-lg-5 text-start">
+        <div class="h-100 d-inline-flex align-items-center me-2 me-lg-4">
+          <small class="fa fa-map-marker-alt text-primary me-1 me-lg-2"></small>
+          <small class="d-none d-md-inline">3rd Floor, Square 9 Mall, New Bus Stand Jn, Kasaragod 671123</small>
+          <small class="d-md-none">Square 9 mall, kasaragod</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center">
+          <small class="far fa-clock text-primary me-1 me-lg-2"></small>
+          <small class="d-none d-md-inline">Mon - Sat : 09.00 AM - 06.00 PM</small>
+          <small class="d-md-none">Mon-Sat: 9AM-6PM</small>
+        </div>
+      </div>
+      <div class="col-lg-5 px-3 px-lg-5 text-end">
+        <div class="h-100 d-inline-flex align-items-center me-2 me-lg-4">
+          <small class="fa fa-phone-alt text-primary me-1 me-lg-2"></small>
+          <small>+919072844144</small>
+        </div>
+        <div class="h-100 d-inline-flex align-items-center mx-n1 mx-lg-n2">
+          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+            href="https://www.instagram.com/caddcentrekasaragod?utm_source=ig_web_button_share_sheet&igsh=aHU3cHh3MTd1dnV0"><i
+              class="fab fa-instagram"></i></a>
+          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+            href="https://wa.me/919072844144" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+            href="https://www.linkedin.com/company/cdcinternational-in/posts/?feedView=all"><i
+              class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-2 px-lg-4 px-xl-5">
+      <div class="d-flex align-items-center gap-2 gap-lg-3">
+        <img src="Public/CDC_Logo-03.svg" alt="CDC Logo" style="height: 30px; width: auto" />
+        <img src="Public/CADD CENTRE LOGO SVG.svg" alt="CADD Centre Logo"
+          style="height: 80px; width: auto; margin-top: 10px" />
+      </div>
+    </a>
+    <button type="button" class="navbar-toggler me-2 me-lg-4" data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="index.html" class="nav-item nav-link">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <a href="courses.html" class="nav-item nav-link">Courses</a>
+        <a href="contact.html" class="nav-item nav-link active">Contact</a>
+      </div>
+      <a href="index.html" class="d-none d-lg-block py-4 px-lg-5 text-decoration-none text-dark">Back to CDC</a>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center">
+      <h1 class="display-4 text-white animated slideInDown mb-4">
+        Contact Us
+      </h1>
+      <nav aria-label="breadcrumb animated slideInDown">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item">
+            <a class="text-white" href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a class="text-white" href="#">Pages</a>
+          </li>
+          <li class="breadcrumb-item text-primary active" aria-current="page">
+            Contact
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Page Header End -->
+
+  <!-- Decorative Elements -->
+  <div class="decorative-element decorative-circle"></div>
+  <div class="decorative-element decorative-square"></div>
+
+  <!-- Contact Start -->
+  <div class="container-xxl py-6">
+    <div class="container">
+      <div class="row g-5 align-items-stretch">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="map-container h-100">
+            <iframe class="position-relative w-100 h-100"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249288.84234192013!2d74.69082729453125!3d12.507000100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba48242d60031eb%3A0xf01d64a86edffb49!2sCADD%20Centre%20%7C%20Software%20Training%20in%20Kasaragod!5e0!3m2!1sen!2sin!4v1751867512290!5m2!1sen!2sin"
+              frameborder="0" style="min-height: 450px; border: 0" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
+            <div class="map-overlay">
+              <i class="fa fa-map-marker-alt fa-2x text-warning"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="contact-form-container h-100 d-flex flex-column">
+            <h6 class="text-primary text-uppercase mb-2">Contact Us</h6>
+            <h1 class="display-6 mb-4 fw-bold" style="color: #d90429">
+              Get In Touch With Us
+            </h1>
+            <p class="lead text-secondary mb-4">
+              We're here to help! Fill out the form or reach us directly for
+              any queries, feedback, or support. Our team will respond
+              promptly.
+            </p>
+            <form class="flex-grow-1 d-flex flex-column">
+              <div class="row g-3 flex-grow-1">
+                <div class="col-md-6 col-12">
+                  <div class="form-floating attractive-form-group">
+                    <input type="text" class="form-control attractive-input" id="name" placeholder="Your Name" />
+                    <label for="name"><i class="fas fa-user me-2 text-primary"></i>Your
+                      Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="form-floating attractive-form-group">
+                    <input type="email" class="form-control attractive-input" id="email" placeholder="Your Email" />
+                    <label for="email"><i class="fas fa-envelope me-2 text-primary"></i>Your
+                      Email</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating attractive-form-group">
+                    <input type="text" class="form-control attractive-input" id="subject" placeholder="Subject" />
+                    <label for="subject"><i class="fas fa-tag me-2 text-primary"></i>Subject</label>
+                  </div>
+                </div>
+                <div class="col-12 flex-grow-1">
+                  <div class="form-floating attractive-form-group h-100">
+                    <textarea class="form-control attractive-input h-100" placeholder="Leave a message here"
+                      id="message" style="height: 150px"></textarea>
+                    <label for="message"><i class="fas fa-comment me-2 text-primary"></i>Message</label>
+                  </div>
+                </div>
+                <div class="col-12 d-flex gap-3 mt-2">
+                  <button type="submit" class="btn btn-gradient py-3 px-5 fw-bold shadow attractive-btn flex-grow-1">
+                    <i class="fa fa-paper-plane me-2"></i>Send Message
+                  </button>
+                  <a class="btn btn-success py-3 px-5 fw-bold shadow attractive-btn flex-grow-1" id="whatsappButton"
+                    href="https://wa.me/9072844144?text=Hi%2C%20I%20have%20a%20question%20about%20your%20services"
+                    target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp me-2"></i> WhatsApp Us
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Contact End -->
+
+  <!-- Contact Info Section -->
+  <div class="container-xxl py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h4>Our Location</h4>
+            <p class="mb-0">3rd Floor, Square 9 Mall, New Bus Stand Jn, Kasaragod 671123</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h4>Call Us</h4>
+            <p class="mb-0">+91 9072844144</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4>Email Us</h4>
+            <p class="mb-0">kl.kasargod@caddcentre.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Contact Info Section End -->
+
+  <!-- Footer Start -->
+  <footer class="container-fluid bg-dark text-light footer py-6 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <!-- Contact Info -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <h4 class="text-warning mb-4">Get In Touch</h4>
+
+          <i class="fa fa-map-marker-alt me-3 text-warning"></i>3rd Floor, Square 9 Mall, New Bus Stand Jn, Kasaragod
+          671123
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3 text-warning"></i>+919072844144
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope me-3 text-warning"></i>kl.kasargod@caddcentre.com
+          </p>
+        </div>
+        <!-- Quick Links -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h4 class="text-warning mb-4">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="btn btn-link text-light" href="about.html"><i class="fa fa-angle-right me-2"></i>About Us</a>
+            </li>
+            <li>
+              <a class="btn btn-link text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contact
+                Us</a>
+            </li>
+            <li>
+              <a class="btn btn-link text-light" href="services.html"><i class="fa fa-angle-right me-2"></i>Our
+                Services</a>
+            </li>
+            <li>
+              <a class="btn btn-link text-light" href="privacypolicy.html"><i class="fa fa-angle-right me-2"></i>Privacy
+                Policy</a>
+            </li>
+            <li>
+              <a class="btn btn-link text-light" href="support.html"><i class="fa fa-angle-right me-2"></i>Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-5 col-md-12">
+          <h4 class="text-warning mb-4">Follow Us</h4>
+          <div class="attractive-footer-social mb-3">
+            <a href="https://www.instagram.com/caddcentrekasaragod?utm_source=ig_web_button_share_sheet&igsh=aHU3cHh3MTd1dnV0"
+              target="_blank" class="footer-social-icon instagram" title="Instagram"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@caddcentrekasaragod840" target="_blank" class="footer-social-icon youtube"
+              title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/cdcinternational-in/posts/?feedView=all" target="_blank"
+              class="footer-social-icon linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <p class="mt-3 mb-0 small text-secondary">
+            Stay connected for updates, events, and more!
+          </p>
+        </div>
+      </div>
+      <hr class="bg-light my-4" />
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          &copy; <a href="#" class="text-warning">Cadd-Centre Kasargod</a>,
+          All Rights Reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <span class="small">Designed by CDC Team</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main-enhanced.js"></script>
+
+  <script>
+    document
+      .getElementById("whatsappButton")
+      .addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        let whatsappMessage = `Name: ${name}\n`;
+        whatsappMessage += `Email: ${email}\n`;
+        whatsappMessage += `Subject: ${subject}\n`;
+        whatsappMessage += `Message: ${message}\n\n`;
+        whatsappMessage += `Hi, I have a question about your services.`;
+
+        const whatsappUrl = `https://wa.me/9072844144?text=${encodeURIComponent(
+          whatsappMessage
+        )}`;
+        window.open(whatsappUrl, "_blank");
+      });
+  </script>
+
+  <!-- AI Chatbot -->
+  <script src="js/ai-chatbot.js"></script>
+</body>
+
+</html>

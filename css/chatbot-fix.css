@@ -1,0 +1,192 @@
+/* ========================================
+   AI CHATBOT POSITIONING FIX
+   ========================================
+   
+   Issue: Chatbot button overlaps with WhatsApp button
+   Solution: Stack chatbot above WhatsApp button
+   
+   Apply this fix by adding to your main CSS file
+   or include as a separate stylesheet
+   ======================================== */
+
+/* Fix AI Chatbot Container Position */
+#ai-chatbot-container {
+    position: fixed;
+    bottom: 90px !important;  /* Position above WhatsApp button (70px button + 20px gap) */
+    right: 20px !important;
+    z-index: 10000 !important;  /* Ensure it's above WhatsApp button (9999) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ensure chatbot toggle button is visible */
+.chatbot-toggle {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+/* Chatbot hover effect */
+.chatbot-toggle:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(37, 117, 252, 0.6);
+}
+
+/* Chatbot window positioning */
+.chatbot-window {
+    position: absolute;
+    bottom: 70px;  /* Position above the toggle button */
+    right: 0;
+    width: 350px;
+    height: 450px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 10001;  /* Above the toggle button */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    #ai-chatbot-container {
+        bottom: 80px !important;  /* Adjust for smaller WhatsApp button on mobile */
+        right: 15px !important;
+    }
+    
+    .chatbot-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .chatbot-window {
+        width: 300px;
+        height: 400px;
+        bottom: 60px;
+        right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #ai-chatbot-container {
+        bottom: 70px !important;
+        right: 10px !important;
+    }
+    
+    .chatbot-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    .chatbot-window {
+        width: 280px;
+        height: 350px;
+        bottom: 55px;
+        right: 0;
+    }
+}
+
+/* Alternative: Side-by-side layout for larger screens */
+@media (min-width: 1200px) {
+    /* Option to place chatbot on left side instead */
+    /* Uncomment below to use left-side positioning */
+    /*
+    #ai-chatbot-container {
+        left: 20px;
+        right: auto;
+        bottom: 20px !important;
+    }
+    */
+}
+
+/* Ensure both buttons are visible and don't overlap */
+body {
+    /* Add padding to bottom if needed to prevent content from being hidden */
+    padding-bottom: 0;
+}
+
+/* Visual indicator that both buttons are available */
+.chatbot-toggle::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 12px;
+    height: 12px;
+    background: #28a745;  /* Green dot to indicate active */
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Smooth transitions for better UX */
+#ai-chatbot-container,
+.chatbot-toggle,
+.chatbot-window {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure z-index stacking context is correct */
+.whatsapp-container {
+    z-index: 9999 !important;  /* WhatsApp button below chatbot */
+}
+
+#ai-chatbot-container {
+    z-index: 10000 !important;  /* Chatbot above WhatsApp */
+}
+
+/* Optional: Add a label for clarity */
+.chatbot-toggle::before {
+    content: 'AI Assistant';
+    position: absolute;
+    right: 70px;
+    background: rgba(106, 17, 203, 0.95);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.chatbot-toggle:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Hide label on mobile to save space */
+@media (max-width: 768px) {
+    .chatbot-toggle::before {
+        display: none;
+    }
+}
