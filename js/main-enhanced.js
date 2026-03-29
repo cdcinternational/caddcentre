@@ -1,21 +1,7 @@
 (function ($) {
     "use strict";
 
-    // Modern Spinner with enhanced animation
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').addClass('fade-out');
-                setTimeout(function () {
-                    $('#spinner').removeClass('show');
-                }, 500);
-            }
-        }, 1);
-    };
-
-    $(window).on('load', function () {
-        spinner();
-    });
+    // Preloader removed - page loads immediately without spinner
 
     // Initialize WOW.js with custom settings
     new WOW({
