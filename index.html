@@ -247,15 +247,7 @@
       }
     }
 
-    /* Loading spinner */
-    #spinner {
-      opacity: 1;
-      transition: opacity 0.5s ease;
-    }
-
-    #spinner.fade-out {
-      opacity: 0;
-    }
+    /* Loading spinner removed */
 
     /* Smooth reveal on scroll */
     .reveal {
@@ -419,12 +411,7 @@
 </head>
 
 <body>
-  <!-- Spinner Start -->
-  <div id="spinner"
-    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-grow text-primary" role="status"></div>
-  </div>
-  <!-- Spinner End -->
+  <!-- Preloader removed -->
 
   <!-- Topbar Start -->
   <div class="container-fluid bg-dark text-light p-0">
@@ -479,7 +466,7 @@
         <a href="#testimonials" class="nav-item nav-link px-lg-3" style="font-weight: 500">Testimonials</a>
         <a href="#contact" class="nav-item nav-link px-lg-3" style="font-weight: 500">Contact</a>
       </div>
-      <a href="#" class="d-none d-lg-block py-4 px-lg-5 text-decoration-none text-dark">CDC International</a>
+      <a href="#home" class="d-none d-lg-block py-4 px-lg-5 text-decoration-none text-dark">CDC International</a>
     </div>
   </nav>
   <!-- Navbar End -->
@@ -1235,13 +1222,7 @@
 
   <!-- Landing Page Optimization Scripts -->
   <script>
-    // Spinner
-    $(window).on('load', function () {
-      $('#spinner').addClass('fade-out');
-      setTimeout(function() {
-        $('#spinner').removeClass('show');
-      }, 500);
-    });
+    // Preloader removed - page loads directly
 
     // Back to top button
     $(window).scroll(function () {
