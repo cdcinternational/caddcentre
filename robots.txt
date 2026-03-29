@@ -1,0 +1,68 @@
+# Robots.txt for CADD Centre Kasaragod
+# Domain: https://caddcentre.cdcinternational.in
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://caddcentre.cdcinternational.in/sitemap.xml
+
+# Crawl-delay (optional - prevents server overload)
+Crawl-delay: 1
+
+# Allow important pages
+Allow: /index.html
+Allow: /landing.html
+Allow: /about.html
+Allow: /courses.html
+Allow: /contact.html
+Allow: /team.html
+Allow: /testimonial.html
+Allow: /feature.html
+
+# Allow course pages
+Allow: /Ai-building design.html
+Allow: /Excutive diploma in ad.html
+Allow: /Executive D in BIM.html
+Allow: /ExecutiveD_ID.html
+Allow: /ExecutiveDinSD.html
+Allow: /expertinbd.html
+Allow: /expertid.html
+Allow: /expertinbim.html
+Allow: /experinAD.html
+Allow: /MasterCertificateinMEPDesign.html
+Allow: /MCinAD.html
+Allow: /MCinBD.html
+Allow: /mastercinbim.html
+Allow: /mastercid.html
+
+# Allow utility pages
+Allow: /appointment.html
+Allow: /enrollment_form.html
+Allow: /privacypolicy.html
+
+# Disallow admin or private directories (if any exist in future)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /temp/
+
+# Block common sensitive paths
+Disallow: /*.sql$
+Disallow: /*.log$
+Disallow: /*.bak$
+Disallow: /*config*
+Disallow: /*.env
+
+# Allow CSS and JS files (important for Google rendering)
+Allow: /css/*.css
+Allow: /js/*.js
+Allow: /lib/*.css
+Allow: /lib/*.js
+
+# Allow images
+Allow: /Public/*.jpg
+Allow: /Public/*.png
+Allow: /Public/*.svg
+Allow: /Public/*.webp
+Allow: /Public/*.mp4
