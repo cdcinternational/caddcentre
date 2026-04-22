@@ -1,4 +1,6 @@
 /********** Modern Template CSS **********/
+
+
 :root {
     --primary: #ed1c23;
     --primary-dark: #b8171c;
@@ -51,7 +53,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--dark);
     background-color: var(--white);
@@ -501,11 +503,6 @@ html {
     overflow: hidden;
 }
 
-.courses-item:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--accent);
-}
 
 .team-item {
     transition: var(--transition);
@@ -525,14 +522,42 @@ html {
     transform: scale(1.1);
 }
 
-/* Enhanced Carousel */
-.carousel-item img {
+
+/* Modern Check Icon Styling */
+.modern-check-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--primary) 0%, #ff6b6b 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(237, 28, 35, 0.2);
     transition: var(--transition);
 }
 
-.carousel-item.active img {
-    /* animation: zoomIn 0.8s ease-in-out; */
+.modern-check-icon i {
+    color: white;
+    font-size: 1.2rem;
 }
+
+.feature-box {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #ffffff !important;
+    transition: var(--transition);
+}
+
+.feature-box:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: rgba(var(--primary-rgb), 0.2);
+}
+
+.feature-box:hover .modern-check-icon {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 6px 20px rgba(237, 28, 35, 0.3);
+}
+
 
 /* @keyframes zoomIn {
     from {
@@ -682,9 +707,6 @@ html {
     /* animation: slideInFromBottom 1s ease-out 0.3s both; */
 }
 
-.carousel-caption .btn {
-    /* animation: fadeInScale 1s ease-out 0.6s both; */
-}
 
 /* @keyframes slideInFromTop {
     0% {
@@ -1092,9 +1114,6 @@ html {
         padding: 10px 0;
     }
 
-    .navbar .navbar-nav {
-        /* Removed border-top to eliminate red line on mobile hamburger menu */
-    }
 
     /* Remove any hover effects on mobile navbar */
     .navbar .navbar-nav .nav-link:hover::after {
@@ -1424,10 +1443,6 @@ html {
     margin-top: auto;
 }
 
-.courses-carousel .courses-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
 
 .courses-carousel .courses-item .position-relative {
     overflow: hidden;
@@ -1437,9 +1452,6 @@ html {
     transition: transform 0.5s ease;
 }
 
-.courses-carousel .courses-item:hover img {
-    transform: scale(1.05);
-}
 
 .courses-carousel .courses-item .badge {
     font-size: 0.8rem;

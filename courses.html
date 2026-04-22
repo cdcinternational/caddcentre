@@ -11,14 +11,15 @@
   <!-- Favicon -->
   <link href="Public/fav-icon.png" rel="icon" />
 
-  <!-- Google Web Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Web Fonts (Local) -->
+  <link href="lib/google-fonts/google-fonts.css" rel="stylesheet" />
+  
+  
+  
 
   <!-- Icon Font Stylesheet -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="lib/font-awesome/css/all.min.css" rel="stylesheet">
+  <link href="lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
   <!-- Libraries Stylesheet -->
   <link href="lib/animate/animate.min.css" rel="stylesheet" />
@@ -62,12 +63,14 @@
         </div>
         <div class="h-100 d-inline-flex align-items-center mx-n2">
           <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
-              class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
-              class="fab fa-twitter"></i></a>
-          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
+              class="fab fa-instagram-f"></i></a>
+
+          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+            href="https://www.linkedin.com/company/cdcinternational-in/posts/?feedView=all"><i
               class="fab fa-linkedin-in"></i></a>
-          <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-square btn-link rounded-0"
+            href="https://www.instagram.com/caddcentrekasaragod?utm_source=ig_web_button_share_sheet&igsh=aHU3cHh3MTd1dnV0"><i
+              class="fab fa-instagram"></i></a>
         </div>
       </div>
     </div>
@@ -75,8 +78,8 @@
   <!-- Topbar End -->
 
   <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-    <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top shadow-sm p-0 navbar-sticky">
+    <a href="index.html#home" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
       <div class="d-flex align-items-center gap-3">
         <img src="Public/CDC_Logo-03.svg" alt="CDC Logo" style="height: 50px" />
         <img src="Public/CADD CENTRE LOGO SVG.svg" alt="CADD Centre Logo" style="height: 135px; margin-top: 15px" />
@@ -86,13 +89,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav ms-auto p-4 p-lg-0">
-        <a href="index.html" class="nav-item nav-link">Home</a>
-        <a href="about.html" class="nav-item nav-link">About</a>
-        <a href="courses.html" class="nav-item nav-link active">Courses</a>
-        <a href="contact.html" class="nav-item nav-link">Contact</a>
+      <div class="navbar-nav ms-auto p-4 p-lg-0 align-items-lg-center">
+        <a href="index.html#home" class="nav-item nav-link active px-lg-3 text-danger" style="font-weight: 600">Home</a>
+        <a href="index.html#about" class="nav-item nav-link px-lg-3" style="font-weight: 500">About</a>
+        <a href="courses.html" class="nav-item nav-link px-lg-3" style="font-weight: 500">Courses</a>
+        <a href="index.html#testimonials" class="nav-item nav-link px-lg-3" style="font-weight: 500">Testimonials</a>
+        <a href="index.html#contact" class="nav-item nav-link px-lg-3" style="font-weight: 500">Contact</a>
       </div>
-      <a href="index.html" class="d-none d-lg-block py-4 px-lg-5 text-decoration-none text-dark">Back to CDC</a>
+      <a href="index.html#home" class="d-none d-lg-block py-4 px-lg-5 text-decoration-none text-dark">CDC International</a>
     </div>
   </nav>
   <!-- Navbar End -->
@@ -696,181 +700,67 @@
   </div>
   <!-- Courses End -->
 
-  <!-- Footer Start -->
-  <footer class="container-fluid bg-dark text-light footer py-6 wow fadeIn" data-wow-delay="0.1s">
+  <!-- Footer Start (Matching Screenshot) -->
+  <footer class="pt-5 mt-5" style="background: #fff; border-top: 1px solid #eee;">
     <div class="container">
-      <div class="row g-5 align-items-center">
-        <!-- Contact Info -->
-        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-          <h4 class="text-warning mb-4">Get In Touch</h4>
-
-          <p class="mb-2">
-            <i class="fa fa-map-marker-alt me-3 text-warning"></i>3rd Floor, Square 9 Mall, New Bus Stand Jn, Kasaragod 671123
-          </p>
-          <p class="mb-2">
-            <i class="fa fa-phone-alt me-3 text-warning"></i>+919072844144
-          </p>
-          <p class="mb-2">
-            <i class="fa fa-envelope me-3 text-warning"></i>kl.kasargod@caddcentre.com
-          </p>
+      <div class="row g-4 mb-5 pb-5">
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-danger mb-3">Locations</h6>
+          <div class="mb-3">
+            <p class="small fw-bold text-dark mb-1">Kasaragod</p>
+            <p class="small text-secondary mb-0">3rd Floor, Square 9 Mall, New Bus Stand Junction, Kasaragod 671123</p>
+          </div>
+          <div class="mb-3">
+            <p class="small fw-bold text-dark mb-1">Calicut</p>
+            <p class="small text-secondary mb-0">1st Floor, Ambedkar Building, Link Rd, Palayam, Kozhikode, Kerala 673002</p>
+          </div>
         </div>
-        <!-- Quick Links -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <h4 class="text-warning mb-4">Quick Links</h4>
-          <ul class="list-unstyled">
-            <li>
-              <a class="btn btn-link text-light" href="about.html"><i class="fa fa-angle-right me-2"></i>About Us</a>
-            </li>
-            <li>
-              <a class="btn btn-link text-light" href="contact.html"><i class="fa fa-angle-right me-2"></i>Contact
-                Us</a>
-            </li>
-            <li>
-              <a class="btn btn-link text-light" href="services.html"><i class="fa fa-angle-right me-2"></i>Our
-                Services</a>
-            </li>
-            <li>
-              <a class="btn btn-link text-light" href="privacypolicy.html"><i class="fa fa-angle-right me-2"></i>Privacy
-                Policy</a>
-            </li>
-            <li>
-              <a class="btn btn-link text-light" href="support.html"><i class="fa fa-angle-right me-2"></i>Support</a>
-            </li>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-danger mb-3">Company</h6>
+          <ul class="list-unstyled small text-secondary">
+            <li class="mb-2"><a href="#about" class="text-secondary text-decoration-none">About Us</a></li>
+            <li class="mb-2"><a href="privacypolicy.html" class="text-secondary text-decoration-none">Privacy Policy</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Partnership</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Blog</a></li>
+            <li class="mb-2"><a href="#contact" class="text-secondary text-decoration-none">Contact Us</a></li>
           </ul>
         </div>
-        <div class="col-lg-5 col-md-12">
-          <h4 class="text-warning mb-4">Follow Us</h4>
-          <div class="attractive-footer-social mb-3">
-            <a href="https://www.instagram.com/caddcentrekasaragod?utm_source=ig_web_button_share_sheet&igsh=aHU3cHh3MTd1dnV0"
-              target="_blank" class="footer-social-icon instagram" title="Instagram"><i
-                class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@caddcentrekasaragod840" target="_blank" class="footer-social-icon youtube"
-              title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/company/cdcinternational-in/posts/?feedView=all" target="_blank"
-              class="footer-social-icon linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold text-danger mb-3">Top Courses</h6>
+          <ul class="list-unstyled small text-secondary">
+             <li class="mb-2"><a href="Excutive diploma in ad.html" class="text-secondary text-decoration-none">Architectural Design</a></li>
+             <li class="mb-2"><a href="mastercinbim.html" class="text-secondary text-decoration-none">BIM Technology</a></li>
+             <li class="mb-2"><a href="ExecutiveD_ID.html" class="text-secondary text-decoration-none">Interior Design</a></li>
+             <li class="mb-2"><a href="Ai-building design.html" class="text-secondary text-decoration-none">AI Smart Design</a></li>
+             <li class="mb-2"><a href="expertinbd.html" class="text-secondary text-decoration-none">Building Design</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+           <h6 class="fw-bold text-danger mb-3">Certifications</h6>
+           <ul class="list-unstyled small text-secondary">
+              <li class="mb-2">Premier Certificate</li>
+              <li class="mb-2">Master Certificate</li>
+              <li class="mb-2">Expert Certificate</li>
+           </ul>
+        </div>
+    </div>
+    
+    <!-- Social Media Strip (Full Width) -->
+    <div class="container-fluid bg-danger text-white py-3 mt-4">
+       <div class="row align-items-center px-lg-5">
+          <div class="col-md-6 text-center text-md-start px-4">
+             <p class="mb-0 small">© CADD Centre Kasaragod <span id="displayYear"></span>. All rights reserved.</p>
+             <script>document.getElementById('displayYear').innerHTML = new Date().getFullYear();</script>
           </div>
-          <style>
-            .attractive-footer-social {
-              display: flex;
-              gap: 16px;
-              justify-content: flex-start;
-              align-items: center;
-            }
-
-            .footer-social-icon {
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-              width: 48px;
-              height: 48px;
-              font-size: 1.7rem;
-              border-radius: 50%;
-              background: linear-gradient(135deg, #60a5fa 0%, #6366f1 100%);
-              color: #fff;
-              box-shadow: 0 4px 18px rgba(60, 90, 154, 0.18);
-              transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-              border: none;
-              text-decoration: none;
-              position: relative;
-              overflow: hidden;
-            }
-
-            .footer-social-icon:hover {
-              transform: scale(1.15) rotate(-8deg);
-              box-shadow: 0 8px 24px rgba(60, 90, 154, 0.28);
-              background: linear-gradient(135deg, #6366f1 0%, #60a5fa 100%);
-              color: #fff;
-            }
-
-            .footer-social-icon.whatsapp {
-              background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-            }
-
-            .footer-social-icon.instagram {
-              background: linear-gradient(135deg, #fd1d1d 0%, #833ab4 100%);
-            }
-
-            .footer-social-icon.youtube {
-              background: linear-gradient(135deg, #ff0000 0%, #c4302b 100%);
-            }
-
-            .footer-social-icon.linkedin {
-              background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
-            }
-
-            .footer-social-icon i {
-              pointer-events: none;
-            }
-
-            /* Attractive CDC Button Styles */
-            .attractive-cdc-button {
-              background: linear-gradient(135deg, #ed1c23 0%, #fbb034 100%);
-              color: white;
-              font-weight: 700;
-              border-radius: 50px;
-              transition: all 0.3s ease;
-              box-shadow: 0 4px 15px rgba(237, 28, 35, 0.3);
-              overflow: hidden;
-              position: relative;
-              border: none;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              padding: 12px 25px;
-              /* Reduced padding */
-              font-size: 14px;
-              /* Reduced font size */
-            }
-
-            .attractive-cdc-button:hover {
-              transform: translateY(-3px) scale(1.05);
-              box-shadow: 0 8px 25px rgba(237, 28, 35, 0.4);
-              color: white;
-            }
-
-            .attractive-cdc-button::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: -100%;
-              width: 100%;
-              height: 100%;
-              background: linear-gradient(120deg,
-                  transparent,
-                  rgba(255, 255, 255, 0.3),
-                  transparent);
-              transition: all 0.5s;
-            }
-
-            .attractive-cdc-button:hover::before {
-              left: 100%;
-            }
-
-            .attractive-cdc-button i {
-              transition: transform 0.3s ease;
-              font-size: 12px;
-              /* Reduced icon size */
-            }
-
-            .attractive-cdc-button:hover i {
-              transform: translateX(2px);
-              /* Reduced icon movement */
-            }
-          </style>
-          <p class="mt-3 mb-0 small text-secondary">
-            Stay connected for updates, events, and more!
-          </p>
-        </div>
-      </div>
-      <hr class="bg-light my-4" />
-      <div class="row">
-        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-          &copy; <a href="#" class="text-warning">Cadd-Centre Kasargod</a>,
-          All Rights Reserved.
-        </div>
-        <div class="col-md-6 text-center text-md-end">
-          <span class="small">Designed by CDC Team</span>
-        </div>
-      </div>
+          <div class="col-md-6 text-center text-md-end px-4">
+             <div class="d-inline-flex gap-3">
+                <a href="https://www.facebook.com" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/caddcentrekasaragod" class="text-white"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/cdcinternational-in" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/@caddcentrekasaragod840" class="text-white"><i class="fab fa-youtube"></i></a>
+             </div>
+          </div>
+       </div>
     </div>
   </footer>
   <!-- Footer End -->
@@ -879,8 +769,8 @@
   <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/jquery/jquery-3.4.1.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib/wow/wow.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
   <script src="lib/waypoints/waypoints.min.js"></script>
@@ -928,3 +818,5 @@
 </body>
 
 </html>
+
+

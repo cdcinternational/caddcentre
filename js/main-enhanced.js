@@ -51,46 +51,9 @@
     $('.back-to-top').click(function () {
         $('html, body').animate({
             scrollTop: 0
-        }, 1500, 'easeInOutExpo');
+        }, 600, 'easeInOutExpo');
         return false;
     });
-
-    // Modern Facts counter with intersection observer - Disabled to prevent showing "0" values
-    /* function animateCounters() {
-        $('[data-toggle="counter-up"]').each(function () {
-            var $this = $(this);
-            var countTo = $this.attr('data-count') || $this.text();
-
-            $({ countNum: 0 }).animate({
-                countNum: countTo
-            }, {
-                duration: 2500,
-                easing: 'easeInOutQuart',
-                step: function () {
-                    $this.text(Math.floor(this.countNum).toLocaleString());
-                },
-                complete: function () {
-                    $this.text(parseInt(countTo).toLocaleString());
-                }
-            });
-        });
-    }
-
-    // Intersection Observer for counter animation
-    if ('IntersectionObserver' in window) {
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-                    entry.target.classList.add('counted');
-                    animateCounters();
-                }
-            });
-        }, { threshold: 0.5 });
-
-        $('[data-toggle="counter-up"]').each(function () {
-            counterObserver.observe(this);
-        });
-    } */
 
     // Enhanced Courses carousel with modern effects
     $(".courses-carousel").owlCarousel({
@@ -169,7 +132,7 @@
             event.preventDefault();
             $('html, body').stop().animate({
                 scrollTop: target.offset().top - 100
-            }, 1000, 'easeInOutExpo');
+            }, 400, 'easeInOutExpo');
         }
     });
 
